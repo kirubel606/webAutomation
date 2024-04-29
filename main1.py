@@ -13,6 +13,7 @@ import time
 
 service = Service(executable_path="chromedriver.exe")
 driver = webdriver.Chrome(service=service)
+wait = WebDriverWait(driver, 10)
 
 # Open the URL
 driver.get("https://kefeta-dhis.amref.org/dhis-web-commons/security/login.action")
@@ -29,5 +30,10 @@ password.send_keys("P@ssword1")
 
 signin = driver.find_element(By.ID, "submit")
 signin.click()
+
+time.sleep(5)
+
+menu= driver.find_element(By.XPATH,'//a[@data-test="headerbar-apps-icon"]')
+menu.click()
 
 time.sleep(5)
