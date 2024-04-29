@@ -36,4 +36,11 @@ time.sleep(5)
 menu= driver.find_element(By.XPATH,'//a[@data-test="headerbar-apps-icon"]')
 menu.click()
 
+
+tracker_capture= driver.find_element(By.XPATH,'//a[@href="../api/../dhis-web-tracker-capture/index.action"]')
+tracker_capture.click()
+time.sleep(5)
+register= driver.find_element(By.LINK_TEXT,'Register')
+register.click()
+
 time.sleep(5)
