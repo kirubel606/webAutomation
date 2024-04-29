@@ -39,6 +39,16 @@ menu.click()
 
 tracker_capture= driver.find_element(By.XPATH,'//a[@href="../api/../dhis-web-tracker-capture/index.action"]')
 tracker_capture.click()
+
+time.sleep(5)
+toggle= driver.find_element(By.XPATH, '//span[@class="select2-arrow ui-select-toggle"]')
+toggle.click()
+
+time.sleep(5)
+youth_tally=driver.find_element(By.XPATH, '//div[@class="select2-result-label ui-select-choices-row-inner"]')
+youth_tally.click()
+
+
 time.sleep(5)
 register= driver.find_element(By.LINK_TEXT,'Register')
 register.click()
