@@ -40,17 +40,19 @@ retry_click(menu)
 tracker_capture = wait.until(EC.visibility_of_element_located((By.XPATH,'//a[@href="../api/../dhis-web-tracker-capture/index.action"]')))
 retry_click(tracker_capture)
 
+#wait 5 seconds and click the dropdown button 
 time.sleep(5)
 toggle= driver.find_element(By.XPATH, '//span[@class="select2-arrow ui-select-toggle"]')
 toggle.click()
 
+#find youth tally and then click it to see the list
 time.sleep(2)
 youth_tally= wait.until(EC.visibility_of_element_located((By.XPATH, '//span[@ng-bind-html="program.displayName | highlight: $select.search"]')))
 retry_click(youth_tally)
 
 time.sleep(5)
-
+#click register button to go to register form
 register= driver.find_element(By.LINK_TEXT,'Register')
 register.click()
-# Close the WebDriver
+
 
