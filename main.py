@@ -6,6 +6,10 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException
 import time
+
+
+'''This is the optimised version of main1.py which is faster.'''
+
 # Start Chrome WebDriver with options
 service = Service(executable_path="chromedriver.exe")
 driver = webdriver.Chrome(service=service)
